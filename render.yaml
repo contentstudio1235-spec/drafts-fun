@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: draftsfun-x-relay
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # Exactly one worker: more would run several relay loops.
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 120
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      # Secrets: fill these in the Render dashboard (sync: false = not stored in this file).
+      - { key: DATABASE_URL, sync: false }
+      - { key: ADMIN_PASSWORD, sync: false }
+      - { key: X_BEARER_TOKEN, sync: false }
+      - { key: X_API_KEY, sync: false }
+      - { key: X_API_SECRET, sync: false }
+      - { key: X_ACCESS_TOKEN, sync: false }
+      - { key: X_ACCESS_TOKEN_SECRET, sync: false }
+      - { key: X_USER_ID, sync: false }
+      - { key: TELEGRAM_BOT_TOKEN, sync: false }
+      - { key: TELEGRAM_CHAT_ID, sync: false }
+      - { key: DISCORD_WEBHOOK_URL, sync: false }
+      - { key: DISCORD_PING_ROLE_ID, sync: false }
+      - { key: X_USERNAME, value: DraftsFun }
+      - { key: POLL_SECONDS, value: "300" }
+      - { key: FIRST_RUN_POSTS, value: "0" }
+      - { key: MAX_POSTS_READ_PER_MONTH, value: "300" }

@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "1900000000000000002",
+      "text": "Season 2 is LIVE 🔥 Draft your squad now &amp; win big 👇 https://t.co/abc123 https://t.co/media1",
+      "created_at": "2026-11-10T10:00:00.000Z",
+      "attachments": {"media_keys": ["7_111"]},
+      "entities": {"urls": [
+        {"start": 52, "end": 75, "url": "https://t.co/abc123", "expanded_url": "https://drafts.fun/season2", "display_url": "drafts.fun/season2"},
+        {"start": 76, "end": 99, "url": "https://t.co/media1", "expanded_url": "https://x.com/DraftsFun/status/1900000000000000002/video/1", "display_url": "pic.x.com/media1", "media_key": "7_111"}
+      ]}
+    },
+    {
+      "id": "1900000000000000001",
+      "text": "Two pics for you https://t.co/media2",
+      "attachments": {"media_keys": ["3_1", "3_2"]},
+      "entities": {"urls": [
+        {"url": "https://t.co/media2", "expanded_url": "https://x.com/DraftsFun/status/1900000000000000001/photo/1", "display_url": "pic.x.com/media2"}
+      ]}
+    }
+  ],
+  "includes": {"media": [
+    {"media_key": "7_111", "type": "video", "preview_image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1/pu/img/x.jpg",
+     "variants": [
+       {"content_type": "application/x-mpegURL", "url": "https://video.twimg.com/x.m3u8"},
+       {"content_type": "video/mp4", "bit_rate": 832000, "url": "https://video.twimg.com/low.mp4"},
+       {"content_type": "video/mp4", "bit_rate": 2176000, "url": "https://video.twimg.com/high.mp4"}
+     ]},
+    {"media_key": "3_1", "type": "photo", "url": "https://pbs.twimg.com/media/a.jpg"},
+    {"media_key": "3_2", "type": "photo", "url": "https://pbs.twimg.com/media/b.jpg"}
+  ]},
+  "meta": {"result_count": 2}
+}
